@@ -32,6 +32,7 @@ RUN set -x && \
         -DGGML_CUDA_FORCE_MMQ=OFF \
         -DGGML_CUDA_GRAPHS=ON \
         -DGGML_NATIVE=OFF \
+        -DGGML_STATIC=ON \
         -DLLAMA_BUILD_SERVER=ON \
         -DLLAMA_BUILD_APP=ON \
         -DLLAMA_BUILD_EXAMPLES=ON \
