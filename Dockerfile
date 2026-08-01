@@ -26,13 +26,14 @@ RUN set -x && \
     cmake -B build \
         -G Ninja \
         -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_EXE_LINKER_FLAGS="-L/usr/local/cuda/lib64/stubs" \
         -DGGML_CUDA=ON \
         -DGGML_CUDA_FA=ON \
         -DGGML_CUDA_FORCE_CUBLAS=OFF \
         -DGGML_CUDA_FORCE_MMQ=OFF \
         -DGGML_CUDA_GRAPHS=ON \
         -DGGML_NATIVE=OFF \
-        -DGGML_STATIC=ON \
+        -DBUILD_SHARED_LIBS=OFF \
         -DLLAMA_BUILD_SERVER=ON \
         -DLLAMA_BUILD_APP=ON \
         -DLLAMA_BUILD_EXAMPLES=ON \
